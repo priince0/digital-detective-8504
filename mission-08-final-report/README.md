@@ -7,7 +7,7 @@ The objective of this final mission was to conduct a comprehensive audit across 
 - Performed a full repository structure and file presence audit against the specification.
 - Verified that all 9 missions (Mission 0 through Mission 8) contain standardized `README.md` files adhering strictly to the required headings.
 - Confirmed that executable scripts (`hello.py` and `number_converter.py`) run cleanly from the terminal without errors.
-- Confirmed that the remote GitHub repository reflects the complete commit history, feature branch (`update-about`), and merged Pull Request #1.
+- Confirmed that the remote GitHub repository reflects the complete commit history, feature branch (`update-about`), and active Pull Request #2.
 - Updated the root `README.md` with complete assignment documentation, topics index, run instructions, and learning reflections.
 - Completed the final submission verification checklist below.
 
@@ -28,9 +28,20 @@ The objective of this final mission was to conduct a comprehensive audit across 
 | **3** | Operating system, processes and permissions | Completed | System specs, process monitoring, path types, POSIX permissions, OS roles. |
 | **4** | How programs run | Completed | Working `hello.py`, compiler vs interpreter comparative analysis. |
 | **5** | Number systems, Python and text encoding | Completed | Manual math working, Python verification, working `number_converter.py`, ASCII/UTF-8 notes. |
-| **6** | Git, GitHub, branches and Pull Requests | Completed | Git glossary, feature branch `update-about`, merged Pull Request #1. |
+| **6** | Git, GitHub, branches and Pull Requests | Completed | Git glossary, feature branch `update-about`, active Pull Request #2 (Open for instructor review). |
 | **7** | Computer networks | Completed | Networking concepts table, `ping` & `nslookup` tests, 6-step web request breakdown. |
 | **8** | Final review and submission | Completed | Repository audit, updated root `README.md`, verified checklist. |
+
+---
+
+### Mission 6 Pull Request Review Note
+As specified in Mission 6, Task 6.3, Step 5:  
+> *"Merge the PR only if your instructor has asked you to complete the merge. If the PR is not merged, clearly state its status in your README."*
+
+- **Pull Request Status:** **OPEN / Unmerged**
+- **Pull Request Reference:** Pull Request #2 (`https://github.com/priince0/digital-detective-8504/pull/2`)
+- **Branches:** Merging `update-about` into `main`
+- **Instructor Action:** Ready for evaluation. The PR is intentionally preserved in an open state so the instructor can inspect the diff and branch history on GitHub. It will be merged upon the instructor's instruction during lab review.
 
 ---
 
@@ -52,10 +63,10 @@ The objective of this final mission was to conduct a comprehensive audit across 
 - [x] All final changes are committed and pushed to GitHub.
 
 ## 5. Difficulties faced
-Ensuring consistent markdown formatting and relative link targets across all nine individual README documents while maintaining privacy protection across terminal outputs.
+Understanding the conditional requirement in Step 5 regarding whether to merge the Pull Request immediately or leave it open awaiting instructor instruction.
 
 ## 6. How I resolved them
-Systematically verified each relative link within the repository and confirmed that all personal computer paths and network addresses were replaced with privacy-safe placeholders (`[redacted]`).
+Left Pull Request #2 open on GitHub for the instructor to review during evaluation and explicitly documented its status and link in both Mission 6 and Mission 8 documentation.
 
 ## 7. Evidence / files
 - Complete repository structure across `mission-00-setup` through `mission-08-final-report`
@@ -65,6 +76,6 @@ Systematically verified each relative link within the repository and confirmed t
 - Practice outputs: `terminal-practice/notes.txt`, `terminal-practice/notes_backup_archive.txt`
 
 ## 8. Commit details
-- **Commit message:** `Complete final report and verify assignment submission`
+- **Commit message:** `Update Mission 6 and 8 with instructor PR status`
 - **Branch:** `main`
 - **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`

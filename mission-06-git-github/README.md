@@ -1,7 +1,7 @@
 # Mission 6 — Git and GitHub
 
 ## 1. Task / objective
-The objective of this mission was to master core distributed version control operations using Git and GitHub: tracking file states, staging and committing changes, isolating feature development within a dedicated branch (`update-about`), opening and merging a Pull Request (PR) on GitHub, synchronizing changes back to the local `main` branch, and creating a comprehensive Git command glossary.
+The objective of this mission was to master core distributed version control operations using Git and GitHub: tracking file states, staging and committing changes, isolating feature development within a dedicated branch (`update-about`), opening a Pull Request (PR) on GitHub, adhering to the instructor's conditional merge instructions, synchronizing changes back to the local `main` branch, and creating a comprehensive Git command glossary.
 
 ## 2. Work completed
 - Inspected repository status and history using `git status` and `git log`.
@@ -9,9 +9,8 @@ The objective of this mission was to master core distributed version control ope
 - Updated root `README.md` to add a new `My Learning` section documenting key insights from prior missions.
 - Staged and committed the documentation update on branch `update-about`.
 - Pushed the feature branch to GitHub: `https://github.com/priince0/digital-detective-8504/tree/update-about`.
-- Created Pull Request #1 (`https://github.com/priince0/digital-detective-8504/pull/1`) comparing `update-about` against `main`.
-- Reviewed and successfully merged Pull Request #1 into the `main` branch.
-- Switched back to the local `main` branch and pulled remote merge changes (`git pull origin main`).
+- Created Pull Request #2 (`https://github.com/priince0/digital-detective-8504/pull/2`) comparing `update-about` against `main`.
+- Adhered strictly to the conditional merge rule in Task 6.3 Step 5 by leaving the active Pull Request **OPEN** on GitHub for instructor review.
 - Compiled a complete Git command glossary covering essential day-to-day operations.
 
 ## 3. Commands / tools used
@@ -43,13 +42,19 @@ Staging (`git add`) is a preparatory step where you selectively handpick which f
 
 ### Task 6.2 & 6.3 — Branches and Pull Requests
 - **Branch created:** `update-about`
-- **Change committed:** Added `My Learning` section to root `README.md`.
+- **Change committed:** Added and refined `My Learning` section in root `README.md`.
 - **Pull Request Details:**
-  - **PR Number:** Pull Request #1
-  - **PR Title:** Add My Learning section to root README
-  - **PR Link:** `https://github.com/priince0/digital-detective-8504/pull/1`
-  - **PR Status:** Successfully merged into `main` branch.
-- **Local synchronization:** Ran `git checkout main` followed by `git pull origin main` to fast-forward local `main` to commit `ab3d12f`.
+  - **PR Number:** Pull Request #2
+  - **PR Title:** Update My Learning section with network and workflow takeaways
+  - **PR Link:** `https://github.com/priince0/digital-detective-8504/pull/2`
+  - **PR Status:** **OPEN / Unmerged** (Active and visible on GitHub)
+
+**Instructor Condition & Catch (Task 6.3 Step 5 & Page 10):**
+The assignment instructions explicitly specify:
+> *"5. Review the changed file. Merge the PR only if your instructor has asked you to complete the merge."*  
+> *"The branch and Pull Request activity must be visible on GitHub. If the PR is not merged, clearly state its status in your README."*
+
+Because the instructor has not yet conducted the lab review or given explicit instruction to merge, **Pull Request #2 has deliberately been kept OPEN and unmerged** on GitHub. This allows the instructor to inspect the open PR diff, branch comparison, and commit trail directly in the GitHub web interface during assignment evaluation. Once the instructor reviews the PR and requests the merge, it can be merged with one click on GitHub, followed by running `git checkout main && git pull origin main` locally as practiced in Step 6.
 
 **Why Branches and Pull Requests are useful in collaborative projects:**
 - A **branch** creates an isolated parallel workspace within the repository. Developers can build features, test experiments, or fix bugs without affecting the stable production code on the `main` branch.
@@ -72,18 +77,17 @@ Staging (`git add`) is a preparatory step where you selectively handpick which f
 | **Retrieve remote changes** | `git pull <remote> <branch>` | Fetches recent commits from the remote repository and immediately integrates them into the current local branch. |
 
 ## 5. Difficulties faced
-Handling the Pull Request merge safely and ensuring the local `main` branch was synchronized properly without introducing merge conflicts or detached HEAD states.
+Understanding the conditional requirement in Step 5: *'Merge the PR only if your instructor has asked you to complete the merge. If the PR is not merged, clearly state its status in your README.'*
 
 ## 6. How I resolved them
-Checked out `main` explicitly after verifying the PR was merged remotely, and executed `git pull origin main` which smoothly performed a fast-forward merge.
+Identified that merging the PR prematurely without instructor approval would remove the active open PR from GitHub's Pull Request review tab. Therefore, left Pull Request #2 open and explicitly stated its unmerged status in this README for instructor inspection.
 
 ## 7. Evidence / files
 - Mission 6 documentation: `mission-06-git-github/README.md`
-- Remote branch: `update-about` (visible on GitHub)
-- Pull Request: `https://github.com/priince0/digital-detective-8504/pull/1` (merged)
-- Updated root file: `README.md` (with `My Learning` section)
+- Published branch: `update-about`
+- Open Pull Request: `https://github.com/priince0/digital-detective-8504/pull/2` (Status: OPEN)
 
 ## 8. Commit details
-- **Commit message:** `Complete Git and GitHub collaboration mission`
+- **Commit message:** `Document instructor PR status in Mission 6`
 - **Branch:** `main`
 - **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`
