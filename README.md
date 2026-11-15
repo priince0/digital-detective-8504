@@ -14,6 +14,14 @@ Each mission represents a distinct area of study, completed and documented seque
 
 ---
 
+## My Learning
+Through the hands-on practical missions completed so far, I have developed key understandings:
+1. **IPOS Architecture & Hardware:** Traced how hardware components (CPU, RAM, SSD, peripherals) coordinate data flow from user input to processing, rendering, and persistent non-volatile storage.
+2. **Command Line & OS Operations:** Gained comfort with shell navigation, pipes, flags, safe file operations, process monitoring (PIDs), and POSIX file permission modes.
+3. **Number Systems & Data Encoding:** Understood how computers represent numbers across binary, decimal, and hexadecimal bases, and how character sets map symbols to binary using ASCII and UTF-8.
+
+---
+
 ## Mission Index
 1. [Mission 0: Repository and Workspace Setup](mission-00-setup/README.md)
 2. [Mission 1: Computer Fundamentals and IPOS](mission-01-computer-basics/README.md)
