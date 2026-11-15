@@ -69,6 +69,7 @@ Completing this assignment provided direct practical insight into how computers 
 - **CLI Mastery:** Gaining fluency in Unix shell commands, file manipulation, and process inspection rather than relying solely on graphical tools.
 - **Low-Level Data:** Tracing how human-readable information, text strings, and integers are translated into binary bit sequences.
 - **Engineering Workflows:** Adopting professional version control habits, including atomic commits, branch isolation, and pull request reviews.
+- **Network Fundamentals:** Tracing how data packets traverse local routers, DNS resolvers, and TCP handshakes to securely retrieve and render web pages.
 
 ---
 
