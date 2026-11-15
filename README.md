@@ -1,39 +1,76 @@
 # The Digital Detective: Explore Your Computer
 
-## Student Details
+## Student Information
 - **Student Name:** Prince Rabadiya
 - **Repository Name:** digital-detective-8504
 - **USN Reference:** Last four digits: 8504
+- **Repository URL:** [https://github.com/priince0/digital-detective-8504](https://github.com/priince0/digital-detective-8504)
 
 ---
 
 ## Assignment Overview
-This repository contains the completed work for the Diwali Independent Learning Assignment: *The Digital Detective*. The goal of this assignment is to explore core computer science fundamentals through hands-on practical tasks, terminal interactions, operating system inspection, data representation, program execution, Git version control, and computer networking.
+This repository contains the complete work for the Diwali Independent Learning Assignment: **The Digital Detective**. The assignment explores fundamental computer science and systems principles through structured hands-on investigations. It covers hardware architectures, operating system operations, command-line proficiency, program execution models, number representation, character encodings, Git/GitHub collaboration workflows, and computer networks.
 
-Each mission represents a distinct area of study, completed and documented sequentially. Every mission folder contains its own dedicated `README.md` following the required reporting format, along with all associated code, command outputs, and evidence.
+Each mission was conducted sequentially in its own dedicated directory with comprehensive documentation, clean code, verification output, and individual Git commits.
 
 ---
 
-## My Learning
-Through the hands-on practical missions completed so far, I have developed key understandings:
-1. **IPOS Architecture & Hardware:** Traced how hardware components (CPU, RAM, SSD, peripherals) coordinate data flow from user input to processing, rendering, and persistent non-volatile storage.
-2. **Command Line & OS Operations:** Gained comfort with shell navigation, pipes, flags, safe file operations, process monitoring (PIDs), and POSIX file permission modes.
-3. **Number Systems & Data Encoding:** Understood how computers represent numbers across binary, decimal, and hexadecimal bases, and how character sets map symbols to binary using ASCII and UTF-8.
+## Topics Explored
+1. **Computer Fundamentals & IPOS:** The Input-Process-Output-Storage model, hardware versus software classification, and embedded everyday computer systems.
+2. **Terminal & File Operations:** Essential shell commands (`pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `cat`), standard streams, output redirection (`>` vs `>>`), flags (`-lah`), and pipes (`|`).
+3. **Operating System Architecture:** Kernel roles, process scheduling, process IDs (PIDs), file system hierarchies, absolute vs. relative paths, and POSIX permissions (`rwx`).
+4. **Program Execution:** How high-level code executes, running standalone Python scripts from the terminal, and comparing ahead-of-time compilers against dynamic interpreters.
+5. **Data Representation & Encodings:** Manual conversions across decimal, binary, and hexadecimal bases, Python verification, interactive converter development, and text character encodings (ASCII & UTF-8).
+6. **Git & GitHub Workflows:** Distributed version control, staging vs. committing, feature branch isolation (`update-about`), Pull Request lifecycle, code reviews, and remote branch synchronization.
+7. **Computer Networks:** Network topologies (LAN, MAN, WAN), DNS resolution, routing, packet switching, ICMP connectivity testing (`ping`), and the client-server web lifecycle.
 
 ---
 
 ## Mission Index
-1. [Mission 0: Repository and Workspace Setup](mission-00-setup/README.md)
-2. [Mission 1: Computer Fundamentals and IPOS](mission-01-computer-basics/README.md)
-3. [Mission 2: Terminal and File Management](mission-02-terminal/README.md)
-4. [Mission 3: Operating System, Processes and Permissions](mission-03-operating-system/README.md)
-5. [Mission 4: How Programs Run (Compilers and Interpreters)](mission-04-programs/README.md)
-6. [Mission 5: Number Systems, Python and Text Encoding](mission-05-numbers-data/README.md)
-7. [Mission 6: Git, GitHub, Branches and Pull Requests](mission-06-git-github/README.md)
-8. [Mission 7: Computer Networks](mission-07-networking/README.md)
-9. [Mission 8: Final Review and Submission Checklist](mission-08-final-report/README.md)
+| Mission | Focus Area | Directory / Documentation |
+| :---: | :--- | :--- |
+| **0** | Repository and workspace setup | [mission-00-setup/README.md](mission-00-setup/README.md) |
+| **1** | Computer fundamentals and IPOS | [mission-01-computer-basics/README.md](mission-01-computer-basics/README.md) |
+| **2** | Terminal and file management | [mission-02-terminal/README.md](mission-02-terminal/README.md) |
+| **3** | Operating system, processes and permissions | [mission-03-operating-system/README.md](mission-03-operating-system/README.md) |
+| **4** | How programs run (Compilers vs Interpreters) | [mission-04-programs/README.md](mission-04-programs/README.md) |
+| **5** | Number systems, Python and text encoding | [mission-05-numbers-data/README.md](mission-05-numbers-data/README.md) |
+| **6** | Git, GitHub, branches and Pull Requests | [mission-06-git-github/README.md](mission-06-git-github/README.md) |
+| **7** | Computer networks | [mission-07-networking/README.md](mission-07-networking/README.md) |
+| **8** | Final review and submission checklist | [mission-08-final-report/README.md](mission-08-final-report/README.md) |
 
 ---
 
-## Workflow and Commit Policy
-All missions are completed in chronological order from Mission 0 through Mission 8. Each completed mission is documented and committed individually with a descriptive commit message before progressing to the next mission.
+## Instructions for Running the Number Converter
+The Python number converter built in Mission 5 converts any positive decimal number into its binary and hexadecimal representations.
+
+To run the program:
+1. Open your terminal and navigate to the project directory:
+   ```bash
+   cd digital-detective-8504/mission-05-numbers-data
+   ```
+2. Execute the script using Python 3:
+   ```bash
+   python3 number_converter.py
+   ```
+3. Enter any positive decimal number when prompted (e.g. `42`) and view the converted results:
+   ```
+   Enter a decimal number: 42
+   Decimal: 42
+   Binary: 0b101010
+   Hexadecimal: 0x2a
+   ```
+
+---
+
+## My Learning
+Completing this assignment provided direct practical insight into how computers operate across hardware and software boundaries:
+- **System Architecture:** Understanding how the CPU, memory, and persistent SSD storage cooperate to service application workloads.
+- **CLI Mastery:** Gaining fluency in Unix shell commands, file manipulation, and process inspection rather than relying solely on graphical tools.
+- **Low-Level Data:** Tracing how human-readable information, text strings, and integers are translated into binary bit sequences.
+- **Engineering Workflows:** Adopting professional version control habits, including atomic commits, branch isolation, and pull request reviews.
+
+---
+
+## Commit & Integrity Policy
+All missions were executed, documented, and committed in sequence. Each mission received an individual descriptive commit and was verified on GitHub before progressing to the subsequent mission. All personal identifiers (IP addresses, internal usernames, Wi-Fi identifiers) have been carefully redacted to maintain privacy.
