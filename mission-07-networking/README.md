@@ -1,18 +1,18 @@
 # Mission 7 — How computers communicate
 
 ## 1. Task / objective
-The objective of this mission was to explore computer networking fundamentals, understand standard network topologies and conceptual models, observe network connectivity and domain name resolution using command-line diagnostic tools (`ping`, `nslookup`), and construct a structured 5-to-7 step explanation detailing the end-to-end communication process when accessing a website.
+The goal of this mission was to learn how computer networks work, understand common networking terms like LAN, WAN, and DNS, test network connectivity and address lookup using Terminal commands (`ping` and `nslookup`), and write a simple 5-to-7 step explanation of what happens when you open a website in a browser.
 
 ## 2. Work completed
-- Populated the network concepts table explaining LAN, MAN, WAN, DNS, Router, Protocol, Packet Switching, and the Client-Server model with realistic examples.
-- Conducted an ICMP echo connectivity test to verify reachability and latency to a public domain (`example.com`).
-- Performed a DNS name resolution lookup using `nslookup` to discover IP addresses mapped to `example.com`.
-- Explained the purpose of connectivity testing, DNS records, and the browser resolution flow.
-- Authored a 6-step breakdown tracing how a web browser requests, receives, and renders a web page using correct networking terminology (*client*, *server*, *DNS*, and *protocol*).
+- Filled out the network concepts table with explanations and simple examples.
+- Ran a connectivity test using `ping` to see if my computer could reach `example.com`.
+- Ran a DNS lookup using `nslookup` to see the IP address behind `example.com`.
+- Answered questions about what ping tests, what DNS lookups show, and why DNS is important.
+- Wrote a 6-step breakdown of how a browser opens a website, using the required terms: *client*, *server*, *DNS*, and *protocol*.
 
 ## 3. Commands / tools used
-- `ping -c 3 example.com`: Sent 3 ICMP echo request packets to measure round-trip time and packet loss.
-- `nslookup example.com`: Queried configured DNS servers to resolve the domain name to its IPv4 addresses.
+- `ping -c 3 example.com`: Sent 3 test packets to see if the website server was responding.
+- `nslookup example.com`: Looked up the IP address linked to the domain name.
 
 ## 4. My understanding
 
@@ -20,53 +20,49 @@ The objective of this mission was to explore computer networking fundamentals, u
 
 | Concept | Explain it in your own words | Example |
 | :--- | :--- | :--- |
-| **LAN (Local Area Network)** | A computer network connecting devices within a limited, localized physical geographic area under unified management. | Home Wi-Fi network connecting a laptop, smartphone, and smart TV. |
-| **MAN (Metropolitan Area Network)** | A communication network spanning an entire city, municipal area, or sprawling university campus. | A university campus network interconnecting departmental academic buildings and student hostels across a town. |
-| **WAN (Wide Area Network)** | A telecommunications network spanning large geographic distances across cities, countries, or continents. | The global Internet, or an international banking network connecting branches worldwide. |
-| **DNS (Domain Name System)** | A hierarchical distributed naming system that translates human-friendly domain names into machine-routable numerical IP addresses. | Translating `example.com` into destination IP `104.20.23.154`. |
-| **Router** | A networking layer-3 device that inspects destination IP headers and routes packets across differing networks. | A home wireless gateway router forwarding packets between the local private subnet and the ISP network. |
-| **Protocol** | An established, standardized set of rules and message formats governing how devices format, transmit, and verify data. | HTTP / HTTPS for web pages, TCP for reliable transport, IP for packet routing. |
-| **Packet switching** | A transmission paradigm where digital data is broken down into small, independently addressed packets that traverse various network paths before reassembly at the destination. | Web pages split into standard TCP/IP packets traveling across diverse optical fiber routers across the Internet. |
-| **Client-server** | A distributed computing architecture where client programs initiate service requests and central server programs fulfill and respond to those requests. | A web browser (client) requesting an HTML document from a remote web server (server) hosting the site. |
+| **LAN** | A local network that connects computers and devices in a small area. | A home Wi-Fi network connecting a laptop, phone, and TV. |
+| **MAN** | A network that covers a larger area like a whole city or a college campus. | A university network connecting all the buildings and hostels across campus. |
+| **WAN** | A wide network that connects computers across cities, countries, or the whole world. | The Internet. |
+| **DNS** | The system that turns human-friendly website names into numbers (IP addresses) that computers use. | Translating `example.com` into `104.20.23.154`. |
+| **Router** | A device that forwards data between different networks and directs traffic to the right place. | A home Wi-Fi router connecting my devices to the internet. |
+| **Protocol** | A set of rules that computers follow so they can understand each other. | HTTP or HTTPS for web pages, and TCP for reliable data transfer. |
+| **Packet switching** | Breaking down data into small pieces called packets that travel across the network and get put back together at the destination. | Sending a message or loading a web page over the internet. |
+| **Client-server** | A system where one computer (client) asks for information, and another computer (server) provides it. | A web browser asking for a web page from a web server. |
 
 ---
 
 ### Task 7.2 — Observe network information
-- **Network reachability test (`ping`):**
+- **Connectivity test (`ping`):**
   - Command: `ping -c 3 example.com`
-  - Output summary:
-    - 3 packets transmitted, 3 packets received, `0.0% packet loss`.
-    - Round-trip latency: min = `4.371 ms`, avg = `8.144 ms`, max = `15.622 ms`.
-- **DNS name resolution (`nslookup`):**
+  - Observation: Sent 3 packets and received all 3 back with `0.0% packet loss`. The average round-trip time was about 8 milliseconds.
+- **DNS lookup (`nslookup`):**
   - Command: `nslookup example.com`
-  - Output summary:
-    - Resolver: `8.8.8.8#53` (Public DNS)
-    - Resolved Addresses: `104.20.23.154`, `172.66.147.243`
+  - Observation: The DNS resolver returned IP address `104.20.23.154` (and `172.66.147.243`).
 - **Questions & Explanations:**
-  - **What a connectivity test helps you check:**
-    A tool like `ping` tests whether a remote host is online, reachable across the network, and responding to ICMP packets. It measures network round-trip time (latency) and detects packet loss or routing dropouts.
-  - **What information a DNS lookup displays:**
-    A DNS lookup tool displays the domain name queried, the resolver server answering the query, and the associated resource records (such as IPv4 `A` records or IPv6 `AAAA` records) mapping the name to IP addresses.
-  - **Role of DNS when entering a website name in a browser:**
-    Because humans remember names (like `example.com`) while network routing protocols require numerical IP addresses (like `104.20.23.154`), DNS acts as the Internet's address book. The browser queries DNS before initiating any connection so it knows where to send TCP packets.
+  - **What a connectivity test helps you check:**  
+    It tells you if your computer can actually reach another computer or server on the network, how long the message takes to go and come back, and whether any data packets were lost.
+  - **What information a DNS lookup displays:**  
+    It shows the domain name you searched for, the name server that answered, and the IP address mapped to that name.
+  - **Role of DNS when you enter a website name in a browser:**  
+    Humans remember names like `example.com`, but computers need numeric IP addresses to find each other on the network. When you type a name into a browser, DNS looks up the IP address so the browser knows where to send the request.
 
 ---
 
 ### Task 7.3 — What happens when you open a website?
-When a user types a website address (such as `https://example.com`) into a browser and presses Enter, the following sequence occurs:
+Here is what happens in order when you type a website name into your browser and press Enter:
 
-1. **URL Parsing & Cache Check:** The web browser (**client**) inspects the entered URL, identifies the **protocol** (`https`), and checks local browser and OS caches to see if the IP address for the domain name is already known.
-2. **DNS Resolution:** If the IP address is not cached, the client issues a **DNS** query to the configured recursive resolver. The resolver traverses the DNS hierarchy (Root, TLD, and Authoritative servers) to translate `example.com` into its destination IP address (`104.20.23.154`) and returns it to the client.
-3. **TCP Connection & TLS Handshake:** The client initiates a reliable network connection with the destination IP address using the TCP **protocol** (three-way handshake: SYN, SYN-ACK, ACK). For HTTPS, a TLS cryptographic handshake follows to negotiate encryption keys and verify identity.
-4. **Packet Routing Across Network:** Network packets carrying the request leave the client machine and are directed by the local home or office **router**, which routes the packets across intermediate ISP routers and optical backbones toward the destination network.
-5. **Server Processing:** The remote web **server** listening on port 443 receives the encrypted HTTP GET request packets, reassembles them, decrypts the payload, processes the request, and generates an HTTP response containing the HTML, CSS, JavaScript, and asset resources.
-6. **Response Transmission & Browser Rendering:** The server transmits the response packets back across the network to the client. The browser client receives the packets, parses the HTML document structure, downloads associated assets, executes JavaScript, and renders the visual web page on the user's screen.
+1. **Entering the website name:** You open your web browser (which is the **client**) and type in a web address like `https://example.com`.
+2. **Looking up the address via DNS:** Your browser needs the computer address (IP address) for that name, so it asks a **DNS** server to translate `example.com` into its IP address (`104.20.23.154`).
+3. **Connecting through the network:** Once the browser has the IP address, it uses the network **protocol** (like TCP and HTTPS) to start a connection.
+4. **Sending the request through the router:** The request is broken into packets and sent through your local **router**, which forwards them across the internet toward the website's location.
+5. **The server responds:** The remote web **server** gets the request, finds the requested web page data, and sends it back in packets across the network.
+6. **Displaying the page:** The browser client receives all the packets, puts the data together, and displays the web page text and images on your screen.
 
 ## 5. Difficulties faced
-Distinguishing between network-level reachability (ICMP ping responses) and application-level availability (HTTP status responses), as some firewalls block ping packets while still serving web pages.
+Understanding how `ping` and `nslookup` differ.
 
 ## 6. How I resolved them
-Verified connectivity using both `ping` and `nslookup`, confirming that `example.com` was actively responding to ICMP echo requests with zero packet loss and resolving valid IP records.
+I realized that `nslookup` only looks up the IP address in the phonebook (DNS), while `ping` actually sends test packets to see if the server is online and responding.
 
 ## 7. Evidence / files
 - Mission 7 documentation: `mission-07-networking/README.md`
@@ -74,4 +70,4 @@ Verified connectivity using both `ping` and `nslookup`, confirming that `example
 ## 8. Commit details
 - **Commit message:** `Explain networking concepts and website communication`
 - **Branch:** `main`
-- **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`
+- **Push status:** Pushed to GitHub

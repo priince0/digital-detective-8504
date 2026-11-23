@@ -1,28 +1,27 @@
 # Mission 6 — Git and GitHub
 
 ## 1. Task / objective
-The objective of this mission was to master core distributed version control operations using Git and GitHub: tracking file states, staging and committing changes, isolating feature development within a dedicated branch (`update-about`), opening a Pull Request (PR) on GitHub, adhering to the instructor's conditional merge instructions, synchronizing changes back to the local `main` branch, and creating a comprehensive Git command glossary.
+The goal of this mission was to learn how version control works with Git and GitHub. I practiced checking repository status, staging and committing changes, creating a separate branch called `update-about`, opening a Pull Request (PR) on GitHub, understanding the instructor's rule about merging, and building a Git command glossary.
 
 ## 2. Work completed
-- Inspected repository status and history using `git status` and `git log`.
-- Created and checked out a dedicated feature branch named `update-about`.
-- Updated root `README.md` to add a new `My Learning` section documenting key insights from prior missions.
-- Staged and committed the documentation update on branch `update-about`.
-- Pushed the feature branch to GitHub: `https://github.com/priince0/digital-detective-8504/tree/update-about`.
-- Created Pull Request #2 (`https://github.com/priince0/digital-detective-8504/pull/2`) comparing `update-about` against `main`.
-- Adhered strictly to the conditional merge rule in Task 6.3 Step 5 by leaving the active Pull Request **OPEN** on GitHub for instructor review.
-- Compiled a complete Git command glossary covering essential day-to-day operations.
+- Used `git status` and `git log` to see untracked files and previous commits.
+- Created and switched to a new branch called `update-about`.
+- Updated the root `README.md` to add a section called `My Learning` describing what I learned so far.
+- Staged and committed the changes on the `update-about` branch.
+- Pushed the branch to GitHub: `https://github.com/priince0/digital-detective-8504/tree/update-about`.
+- Opened Pull Request #2 on GitHub (`https://github.com/priince0/digital-detective-8504/pull/2`) to compare `update-about` with `main`.
+- Followed Step 5 by leaving the Pull Request **OPEN** on GitHub so the instructor can review it.
+- Wrote a one-line explanation for each common Git command in the glossary table.
 
 ## 3. Commands / tools used
-- `git status`: Checks the state of the working directory and staging area.
-- `git add <file>`: Stages modified files for the next commit.
-- `git commit -m "..."`: Records staged changes to the local repository history.
-- `git log --oneline`: Views commit history in compact format.
+- `git status`: Checks which files are modified or staged.
+- `git add <file>`: Stages a file so it can be committed.
+- `git commit -m "..."`: Saves the staged changes into the local history.
+- `git log --oneline`: Shows a compact list of past commits.
 - `git checkout -b update-about`: Creates and switches to a new branch.
-- `git push -u origin update-about`: Publishes the local branch to the remote repository.
-- `git checkout main`: Switches working branch back to `main`.
-- `git pull origin main`: Fetches and merges updates from the remote repository.
-- GitHub Pull Request API / Web UI.
+- `git push -u origin update-about`: Pushes the new branch to GitHub.
+- `git checkout main`: Switches back to the main branch.
+- GitHub web interface to view branches and create the Pull Request.
 
 ## 4. My understanding
 
@@ -30,35 +29,34 @@ The objective of this mission was to master core distributed version control ope
 
 | Git operation | What it does in your own words |
 | :--- | :--- |
-| **Check repository status** | Shows which files are currently tracked, untracked, modified, or staged for the next commit. |
-| **Stage selected changes** | Moves specific file modifications from the working directory into the staging area (index) to prepare them for recording. |
-| **Create a commit** | Creates a permanent cryptographic snapshot (with author, timestamp, and message) of all files currently in the staging area. |
-| **View commit history** | Displays the chronological log of all past commits on the current branch showing commit SHAs, dates, and messages. |
+| **Check repository status** | Shows which files have been modified, which files are ready to be committed, and which are untracked. |
+| **Stage selected changes** | Picks specific changed files and gets them ready to be saved in the next commit. |
+| **Create a commit** | Saves a permanent snapshot of the staged changes along with a message explaining what was done. |
+| **View commit history** | Shows the list of past commits so you can see who changed what and when. |
 
-**Difference between staging and committing:**
-Staging (`git add`) is a preparatory step where you selectively handpick which file modifications will be included in the next snapshot. It allows grouping related changes logically. Committing (`git commit`) takes everything currently staged and permanently writes a discrete snapshot into the Git repository's history with a descriptive message and unique commit hash.
+**Difference between staging and committing:**  
+Staging (`git add`) is like putting files into a box before sealing it. You can pick and choose exactly which changes go in. Committing (`git commit`) is like sealing the box and putting a label on it—it permanently records that snapshot into Git's history.
 
 ---
 
 ### Task 6.2 & 6.3 — Branches and Pull Requests
 - **Branch created:** `update-about`
-- **Change committed:** Added and refined `My Learning` section in root `README.md`.
-- **Pull Request Details:**
+- **Change made:** Added and updated the `My Learning` section in `README.md`.
+- **Pull Request details:**
   - **PR Number:** Pull Request #2
   - **PR Title:** Update My Learning section with network and workflow takeaways
   - **PR Link:** `https://github.com/priince0/digital-detective-8504/pull/2`
-  - **PR Status:** **OPEN / Unmerged** (Active and visible on GitHub)
+  - **PR Status:** **OPEN / Unmerged** (waiting for instructor review)
 
-**Instructor Condition & Catch (Task 6.3 Step 5 & Page 10):**
-The assignment instructions explicitly specify:
-> *"5. Review the changed file. Merge the PR only if your instructor has asked you to complete the merge."*  
-> *"The branch and Pull Request activity must be visible on GitHub. If the PR is not merged, clearly state its status in your README."*
+**Instructor note on merging (Step 5):**  
+Task 6.3, Step 5 specifically states:  
+> *"Merge the PR only if your instructor has asked you to complete the merge. If the PR is not merged, clearly state its status in your README."*
 
-Because the instructor has not yet conducted the lab review or given explicit instruction to merge, **Pull Request #2 has deliberately been kept OPEN and unmerged** on GitHub. This allows the instructor to inspect the open PR diff, branch comparison, and commit trail directly in the GitHub web interface during assignment evaluation. Once the instructor reviews the PR and requests the merge, it can be merged with one click on GitHub, followed by running `git checkout main && git pull origin main` locally as practiced in Step 6.
+Because my instructor has not yet asked me to merge, I have kept **Pull Request #2 open on GitHub**. This way, my instructor can click on the `Pull requests` tab on GitHub to see the open PR, review the branch comparison, and see the diff before giving instructions to merge it.
 
-**Why Branches and Pull Requests are useful in collaborative projects:**
-- A **branch** creates an isolated parallel workspace within the repository. Developers can build features, test experiments, or fix bugs without affecting the stable production code on the `main` branch.
-- A **Pull Request (PR)** is a formal proposal to merge changes from a feature branch into the base branch. It provides an interface for team members to review code diffs, leave comments, run automated tests (CI/CD), discuss implementation details, and maintain code quality before integrating changes.
+**Why branches and Pull Requests are useful:**  
+- A **branch** gives you an isolated workspace to try new ideas or work on new features without messing up the working code on `main`.
+- A **Pull Request** lets team members review and discuss your changes before anything gets merged into the main project.
 
 ---
 
@@ -66,28 +64,28 @@ Because the instructor has not yet conducted the lab review or given explicit in
 
 | Operation | Command | One-line explanation in my own words |
 | :--- | :--- | :--- |
-| **Initialise a repository** | `git init` | Transforms an existing folder into a tracked Git repository by creating the hidden `.git` metadata directory. |
-| **Check status** | `git status` | Displays working tree status, showing staged, unstaged, and untracked files. |
-| **Stage changes** | `git add <path>` | Copies working directory modifications into the staging area preparing them for commit. |
-| **Commit changes** | `git commit -m "<msg>"` | Permanently records the staged changes as a new historical snapshot with a descriptive message. |
-| **View history** | `git log` | Lists past commits chronologically to review changes, authors, and commit messages. |
-| **Create or list branches** | `git branch` | Lists all local branches, or creates a new branch pointer when given a branch name. |
-| **Switch branches** | `git switch <branch>` / `git checkout <branch>` | Updates files in the working directory to match the version recorded on the target branch. |
-| **Publish changes** | `git push <remote> <branch>` | Uploads local branch commits to a remote hosting service such as GitHub. |
-| **Retrieve remote changes** | `git pull <remote> <branch>` | Fetches recent commits from the remote repository and immediately integrates them into the current local branch. |
+| **Initialise a repository** | `git init` | Starts tracking a folder with Git by creating a hidden `.git` folder. |
+| **Check status** | `git status` | Shows which files are modified, staged, or untracked. |
+| **Stage changes** | `git add <file>` | Adds changed files to the staging area so they can be committed. |
+| **Commit changes** | `git commit -m "<msg>"` | Saves the staged files as a permanent snapshot in history. |
+| **View history** | `git log` | Displays past commits with their messages and commit IDs. |
+| **Create or list branches** | `git branch` | Lists existing branches or creates a new one. |
+| **Switch branches** | `git switch <branch>` | Switches the working directory over to a different branch. |
+| **Publish changes** | `git push <remote> <branch>` | Uploads local commits from your computer to GitHub. |
+| **Retrieve remote changes** | `git pull <remote> <branch>` | Downloads new changes from GitHub and merges them into your current branch. |
 
 ## 5. Difficulties faced
-Understanding the conditional requirement in Step 5: *'Merge the PR only if your instructor has asked you to complete the merge. If the PR is not merged, clearly state its status in your README.'*
+Reading Step 5 carefully to understand whether I should merge the PR right away or wait.
 
 ## 6. How I resolved them
-Identified that merging the PR prematurely without instructor approval would remove the active open PR from GitHub's Pull Request review tab. Therefore, left Pull Request #2 open and explicitly stated its unmerged status in this README for instructor inspection.
+I noticed that Step 5 says to merge only if asked by the instructor, so I left the PR open on GitHub and made sure to document its open status here.
 
 ## 7. Evidence / files
 - Mission 6 documentation: `mission-06-git-github/README.md`
-- Published branch: `update-about`
-- Open Pull Request: `https://github.com/priince0/digital-detective-8504/pull/2` (Status: OPEN)
+- Branch: `update-about` (visible on GitHub)
+- Open Pull Request: `https://github.com/priince0/digital-detective-8504/pull/2`
 
 ## 8. Commit details
-- **Commit message:** `Document instructor PR status in Mission 6`
+- **Commit message:** `Complete Git and GitHub collaboration mission`
 - **Branch:** `main`
-- **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`
+- **Push status:** Pushed to GitHub

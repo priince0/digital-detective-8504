@@ -1,22 +1,22 @@
 # Mission 3 — Understand the operating system
 
 ## 1. Task / objective
-The objective of this mission was to inspect the host operating system environment, explore active processes and system metrics, distinguish between absolute and relative file paths, examine POSIX file permission models, and document the core architectural responsibilities of an operating system.
+The goal of this mission was to check my operating system details, see what processes are currently running on my computer, understand process IDs (PIDs), learn the difference between absolute and relative file paths, check file permissions, and explain the main jobs of an operating system.
 
 ## 2. Work completed
-- Checked the operating system version, active user account identity, available disk storage, and real-time CPU/memory activity using terminal utilities.
-- Examined the process table to understand Process Identifiers (PIDs) and background daemon/application tasks.
-- Navigated directory hierarchies to contrast absolute versus relative path notation using project files.
-- Analyzed file permission strings (`r`, `w`, `x`) for files in the practice folder.
-- Completed the operating system core responsibilities analysis table with real-world examples.
+- Checked my macOS version, user account, free disk storage, and active CPU usage using terminal commands.
+- Looked at the running process list to understand what a process is and what the PID column means.
+- Compared absolute and relative paths using files in my project.
+- Checked file permissions on `terminal-practice/notes.txt` to see who can read, write, or execute it.
+- Wrote down the main responsibilities of an operating system with simple everyday examples.
 
 ## 3. Commands / tools used
-- `sw_vers`: Reports operating system product name and release version.
-- `whoami`: Displays the username of the active terminal session.
-- `df -h /`: Displays disk filesystem capacity, used space, and available storage in human-readable gigabytes.
-- `top -l 1`: Generates a single-frame system snapshot of CPU, memory, and thread utilization.
-- `ps -Ao pid,comm,%cpu,%mem`: Lists running processes with their PID, command name, CPU percentage, and memory usage.
-- `ls -l`: Inspects file permissions, ownership, and metadata.
+- `sw_vers`: Showed the macOS name and version number.
+- `whoami`: Showed the user account currently logged into the terminal.
+- `df -h /`: Showed the total, used, and available disk storage on my computer.
+- `top -l 1`: Took a snapshot of system activity, CPU usage, and running processes.
+- `ps -Ao pid,comm,%cpu,%mem`: Listed running processes with their PID and memory/CPU percentages.
+- `ls -l`: Checked the file permissions and ownership of my test files.
 
 ## 4. My understanding
 
@@ -24,45 +24,43 @@ The objective of this mission was to inspect the host operating system environme
 
 | Information explored | What it tells you | Your observation (privacy-safe) |
 | :--- | :--- | :--- |
-| **Operating system / system details** | The exact name, kernel build, and release version of the operating system running on the machine. | `macOS 27.2.1` (Apple Darwin kernel on ARM64 architecture). |
-| **Current account identity** | The specific user account that owns the active shell session and determines privilege scope. | Active account: `[redacted]` (standard non-root user). |
-| **Available and used storage** | Total disk capacity, space consumed by files, and remaining free space on the root filesystem. | Filesystem size: `460 GiB`, Used: `13 GiB` (system volume), Available: `306 GiB` (~5% capacity used on root volume). |
-| **System activity snapshot** | Real-time state of hardware resources: active threads, CPU idle/user percentages, and physical RAM distribution. | 876 total processes (2 running, 874 sleeping), CPU usage: ~5.6% user, ~9.0% system, ~85.4% idle; 15 GiB physical memory utilized. |
+| **Operating system / system details** | Tells me the exact name and release version of the OS running on my laptop. | `macOS 27.2.1` |
+| **Current account identity** | Tells me which user account owns the current terminal session. | `[redacted]` |
+| **Available and used storage** | Shows how much total storage space the disk has, how much is taken up, and how much is free. | Disk size: `460 GiB`, Used: `13 GiB`, Available: `306 GiB` |
+| **System activity snapshot** | Gives a real-time look at how hard the CPU and memory are working. | 876 total processes, CPU usage: ~5.6% user, ~9.0% system, ~85.4% idle |
 
 ---
 
 ### Task 3.2 — Understand processes
-- **What is a process?**
-  A process is an instance of a computer program currently in execution. It contains the program code, its current execution state (program counter and registers), allocated virtual memory address space (stack and heap), and operating system resource handles (open file descriptors and network sockets).
-- **What does the PID column represent?**
-  The PID (Process Identifier) is a unique non-negative integer assigned by the operating system kernel to identify and track each active process throughout its lifetime.
-- **Two examples of running processes:**
-  1. `/sbin/launchd` (PID 1): The root init daemon in macOS responsible for bootstrapping the user space and managing system services.
-  2. `zsh` (Shell process): The interactive command line interpreter process currently executing terminal sessions.
+- **What is a process?**  
+  A process is simply a program that is currently running on the computer. When you open an application or run a script, the operating system creates a process for it in memory.
+- **What does the PID column represent?**  
+  PID stands for Process Identifier. It is a unique number that the operating system assigns to every running process so it can keep track of them individually.
+- **Two examples of running processes:**  
+  1. `/sbin/launchd` (PID 1): The main background service that starts up when macOS boots and helps manage other system services.  
+  2. `zsh`: The shell process that is currently running my terminal session and executing my commands.
 
 ---
 
 ### Task 3.3 — Understand paths and permissions
-- **Difference between absolute and relative paths:**
-  - An **absolute path** specifies the full location of a file or directory starting unconditionally from the root directory (`/`). It is independent of the shell's current location.
+- **Absolute vs Relative paths:**
+  - An **absolute path** gives the complete directions to a file starting from the very top root folder (`/`). It always works no matter where you currently are in the terminal.
     - Example: `/Users/[redacted]/Desktop/digital-detective-8504/mission-00-setup/README.md`
-  - A **relative path** specifies the location of a target file or directory relative to the current working directory (`.`).
-    - Example: `mission-00-setup/README.md` (when working from the repository root) or `../README.md` (when inside a subfolder).
-- **File Permissions Analysis:**
-  Inspected file: `terminal-practice/notes.txt`
-  Output string: `-rw-r--r--`
-  - The leading `-` indicates a regular file.
-  - The first triad `rw-` represents the **owner permissions**:
-    - `r` (read): The owner has permission to open and read file contents.
-    - `w` (write): The owner has permission to edit, append to, or modify the file.
-    - `-` (no execute): The file cannot be executed as a program.
-  - The second and third triads (`r--`, `r--`) represent group and others permissions (read-only).
+  - A **relative path** starts from the folder you are currently sitting in (`.`).
+    - Example: `mission-00-setup/README.md` (when I am in the project root folder) or `../README.md` (if I am inside a subfolder).
+- **File permissions check:**  
+  When I checked `terminal-practice/notes.txt` with `ls -l`, the permission string was `-rw-r--r--`:
+  - The first letter `-` means it is a regular file.
+  - The next three letters `rw-` are the permissions for the owner:
+    - `r` (read): I can open and read the file.
+    - `w` (write): I can edit or save changes to the file.
+    - `-` (no execute): It is just a text file, not a runnable program, so it does not have execute permission.
 
 | Permission | Meaning | Example |
 | :--- | :--- | :--- |
-| **r — Read** | Allows a file's contents to be read or a directory's entries to be listed. | Opening and reading a text document or using `cat`. |
-| **w — Write** | Allows a file to be modified or saved, and items to be added/removed in a folder. | Editing and saving Python code in an editor. |
-| **x — Execute** | Allows a file to be executed as a binary/script, or allows entering a directory. | Running a shell script (`./script.sh`) or `cd` into a directory. |
+| **r — Read** | Lets you open and view the content of a file. | Opening a text file to read it with `cat`. |
+| **w — Write** | Lets you change, add text to, or edit a file. | Saving new lines of code in a file. |
+| **x — Execute** | Lets you run the file as a program or script. | Running a Python script or shell script. |
 
 ---
 
@@ -70,18 +68,18 @@ The objective of this mission was to inspect the host operating system environme
 
 | OS responsibility | Your explanation | Example |
 | :--- | :--- | :--- |
-| **Process management** | Schedules running programs on available CPU cores, handles multitasking, and manages process creation and termination. | Switching execution between a web browser, code editor, and music player using time-slicing. |
-| **Memory management** | Allocates and tracks physical RAM addresses for active programs while isolating process memory spaces via virtual memory. | Allocating 200 MB of RAM when opening a document and freeing it when the application is closed. |
-| **Device management** | Communicates with hardware peripherals using specialized device drivers and manages input/output requests. | Translating USB/Bluetooth mouse movement and keyboard keystrokes into OS input events. |
-| **File management** | Organizes, stores, retrieves, and protects files in a structured hierarchical file system on storage drives. | Creating, saving, renaming, and reading files inside folders on an APFS or ext4 filesystem. |
-| **User interface / shell** | Provides a visual GUI or command-line CLI interface allowing users and applications to interact with the system. | Providing the terminal command shell (`zsh`) or graphical desktop windows and menus. |
-| **Security and permissions** | Enforces access controls, user authentication, privilege boundaries, and file permissions to protect data. | Preventing standard user accounts from modifying protected root system files without authorization. |
+| **Process management** | Decides which programs get to use the CPU and keeps them running smoothly without crashing each other. | Running a web browser, Spotify, and a code editor at the same time. |
+| **Memory management** | Gives RAM space to programs when they open and takes it back when they close. | Giving 500 MB of RAM to a browser tab when it opens. |
+| **Device management** | Helps the computer communicate with connected hardware like mice, printers, and screens. | Detecting when I plug in a USB mouse and moving the cursor. |
+| **File management** | Organizes files into folders on the disk so you can easily save, find, and delete them. | Creating a folder on the desktop and saving notes inside it. |
+| **User interface / shell** | Gives you a way to interact with the computer, either through clickable windows (GUI) or typed commands (Terminal). | Using the Terminal (`zsh`) or the graphical macOS desktop. |
+| **Security and permissions** | Keeps files safe by checking who is allowed to open, edit, or delete them. | Asking for an admin password before installing new software. |
 
 ## 5. Difficulties faced
-Understanding the distinction between virtual memory size (VSIZE) and actual resident physical memory (RES/MEM) displayed in terminal process tables.
+Understanding the difference between the full path and the relative path when moving between folders.
 
 ## 6. How I resolved them
-Reviewed how the kernel uses virtual paging: VSIZE reflects total mapped address space, whereas resident memory reflects the physical RAM pages currently occupied.
+I used `pwd` to see where I was before running `cd`, and practiced using `..` to move back up one level.
 
 ## 7. Evidence / files
 - Mission 3 documentation: `mission-03-operating-system/README.md`
@@ -89,4 +87,4 @@ Reviewed how the kernel uses virtual paging: VSIZE reflects total mapped address
 ## 8. Commit details
 - **Commit message:** `Document operating system and file management`
 - **Branch:** `main`
-- **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`
+- **Push status:** Pushed to GitHub

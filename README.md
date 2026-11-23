@@ -9,25 +9,26 @@
 ---
 
 ## Assignment Overview
-This repository contains the complete work for the Diwali Independent Learning Assignment: **The Digital Detective**. The assignment explores fundamental computer science and systems principles through structured hands-on investigations. It covers hardware architectures, operating system operations, command-line proficiency, program execution models, number representation, character encodings, Git/GitHub collaboration workflows, and computer networks.
+This repository contains my completed work for the Diwali Independent Learning Assignment: **The Digital Detective**. The goal of this assignment is to explore how computers work behind the scenes by completing hands-on practical tasks using the terminal, exploring operating system features, testing programs in Python, converting between number systems, using Git and GitHub, and understanding basic computer networking.
 
-Each mission was conducted sequentially in its own dedicated directory with comprehensive documentation, clean code, verification output, and individual Git commits.
+Each mission was completed one by one in its own folder with notes, command outputs, code, and individual Git commits.
 
 ---
 
 ## Topics Explored
-1. **Computer Fundamentals & IPOS:** The Input-Process-Output-Storage model, hardware versus software classification, and embedded everyday computer systems.
-2. **Terminal & File Operations:** Essential shell commands (`pwd`, `ls`, `cd`, `mkdir`, `cp`, `mv`, `cat`), standard streams, output redirection (`>` vs `>>`), flags (`-lah`), and pipes (`|`).
-3. **Operating System Architecture:** Kernel roles, process scheduling, process IDs (PIDs), file system hierarchies, absolute vs. relative paths, and POSIX permissions (`rwx`).
-4. **Program Execution:** How high-level code executes, running standalone Python scripts from the terminal, and comparing ahead-of-time compilers against dynamic interpreters.
-5. **Data Representation & Encodings:** Manual conversions across decimal, binary, and hexadecimal bases, Python verification, interactive converter development, and text character encodings (ASCII & UTF-8).
-6. **Git & GitHub Workflows:** Distributed version control, staging vs. committing, feature branch isolation (`update-about`), Pull Request lifecycle, code reviews, and remote branch synchronization.
-7. **Computer Networks:** Network topologies (LAN, MAN, WAN), DNS resolution, routing, packet switching, ICMP connectivity testing (`ping`), and the client-server web lifecycle.
+1. **Computer Fundamentals & IPOS:** How computers take input, process information, show output, and save data to storage.
+2. **Terminal Operations:** Using the command line to move around folders, view files, copy and rename files, and use pipes and flags.
+3. **Operating System & Processes:** How the operating system manages running programs (processes and PIDs), file paths, and file permissions.
+4. **How Programs Run:** Running a basic Python script from the terminal and comparing how compilers and interpreters run code.
+5. **Numbers & Data:** Converting numbers by hand between decimal, binary, and hexadecimal, checking them with Python, and writing a Python number converter.
+6. **Git & GitHub:** Learning how to track changes, make commits, create a branch (`update-about`), and open a Pull Request.
+7. **Computer Networks:** Learning how devices talk to each other across LAN and the Internet, using `ping` and `nslookup`, and tracing what happens when opening a website.
+8. **Final Review & Checklist:** Checking that all mission folders are complete and ready for submission.
 
 ---
 
 ## Mission Index
-| Mission | Focus Area | Directory / Documentation |
+| Mission | Focus Area | Folder / Documentation |
 | :---: | :--- | :--- |
 | **0** | Repository and workspace setup | [mission-00-setup/README.md](mission-00-setup/README.md) |
 | **1** | Computer fundamentals and IPOS | [mission-01-computer-basics/README.md](mission-01-computer-basics/README.md) |
@@ -41,19 +42,19 @@ Each mission was conducted sequentially in its own dedicated directory with comp
 
 ---
 
-## Instructions for Running the Number Converter
-The Python number converter built in Mission 5 converts any positive decimal number into its binary and hexadecimal representations.
+## How to Run the Number Converter
+In Mission 5, I wrote a small Python program called `number_converter.py` that takes a normal decimal number and converts it to binary and hexadecimal.
 
-To run the program:
-1. Open your terminal and navigate to the project directory:
+To run it:
+1. Open Terminal and go into the Mission 5 folder:
    ```bash
    cd digital-detective-8504/mission-05-numbers-data
    ```
-2. Execute the script using Python 3:
+2. Run the script with Python 3:
    ```bash
    python3 number_converter.py
    ```
-3. Enter any positive decimal number when prompted (e.g. `42`) and view the converted results:
+3. Type in any positive number when prompted (for example `42`) to see the result:
    ```
    Enter a decimal number: 42
    Decimal: 42
@@ -64,13 +65,13 @@ To run the program:
 ---
 
 ## My Learning
-Completing this assignment provided direct practical insight into how computers operate across hardware and software boundaries:
-- **System Architecture:** Understanding how the CPU, memory, and persistent SSD storage cooperate to service application workloads.
-- **CLI Mastery:** Gaining fluency in Unix shell commands, file manipulation, and process inspection rather than relying solely on graphical tools.
-- **Low-Level Data:** Tracing how human-readable information, text strings, and integers are translated into binary bit sequences.
-- **Engineering Workflows:** Adopting professional version control habits, including atomic commits, branch isolation, and pull request reviews.
+Working through these missions helped me understand a lot about how computers work:
+- **How hardware fits together:** I saw how keystrokes go from the keyboard into CPU processing and RAM, appear on the monitor, and then get saved to the SSD.
+- **Using the command line:** I got much more comfortable using Terminal commands to look at files and folders instead of relying only on mouse clicks.
+- **Data representation:** Doing the math by hand made it clear how numbers and letters are stored as 1s and 0s in binary.
+- **Git workflow:** I practiced making separate commits, creating a branch, and creating a Pull Request on GitHub.
 
 ---
 
-## Commit & Integrity Policy
-All missions were executed, documented, and committed in sequence. Each mission received an individual descriptive commit and was verified on GitHub before progressing to the subsequent mission. All personal identifiers (IP addresses, internal usernames, Wi-Fi identifiers) have been carefully redacted to maintain privacy.
+## Commit & Privacy Note
+Every mission was finished and committed in order before starting the next one. Personal details like my computer username, local IP addresses, and Wi-Fi information have been replaced with `[redacted]` to keep things private.

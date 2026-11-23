@@ -1,47 +1,47 @@
 # Mission 8 — Final report and submission
 
 ## 1. Task / objective
-The objective of this final mission was to conduct a comprehensive audit across all assignment missions, verify repository integrity, confirm that every required folder, script, and documentation file adheres to the assignment requirements, update the root `README.md` for external visitors, complete the final compliance checklist, and prepare the repository for evaluation.
+The goal of this final mission was to review the whole repository, make sure every mission folder has a complete README file following the required outline, test that the Python scripts run properly, verify that all commits and branches are visible on GitHub, check the final submission checklist, and make sure the project is ready for submission.
 
 ## 2. Work completed
-- Performed a full repository structure and file presence audit against the specification.
-- Verified that all 9 missions (Mission 0 through Mission 8) contain standardized `README.md` files adhering strictly to the required headings.
-- Confirmed that executable scripts (`hello.py` and `number_converter.py`) run cleanly from the terminal without errors.
-- Confirmed that the remote GitHub repository reflects the complete commit history, feature branch (`update-about`), and active Pull Request #2.
-- Updated the root `README.md` with complete assignment documentation, topics index, run instructions, and learning reflections.
-- Completed the final submission verification checklist below.
+- Checked all mission folders from Mission 0 through Mission 8 to confirm no files or folders are missing.
+- Verified that each mission folder contains its own `README.md` file using the 8 required headings.
+- Tested both Python programs (`hello.py` and `number_converter.py`) from Terminal to make sure they run without errors.
+- Checked GitHub to confirm all commits and branches (`main` and `update-about`) are visible.
+- Verified that Pull Request #2 is open on GitHub waiting for instructor review.
+- Completed the final submission checklist.
 
 ## 3. Commands / tools used
-- `git status` and `git log --oneline`: Verified clean tree and complete commit history.
-- `python3`: Re-verified execution of `mission-04-programs/hello.py` and `mission-05-numbers-data/number_converter.py`.
-- Markdown linter / preview to ensure table rendering and relative link integrity across all mission READMEs.
+- `git status` and `git log --oneline`: Checked that the working directory is clean and reviewed the commit history.
+- `python3`: Re-tested `hello.py` and `number_converter.py`.
+- Markdown preview in VS Code: Checked that all tables and links render properly.
 
 ## 4. My understanding
 
 ### Mission Status Summary
 
-| Mission | Name / Focus | Status | Key Deliverable |
+| Mission | Focus Area | Status | Deliverables |
 | :---: | :--- | :---: | :--- |
-| **0** | Repository and workspace setup | Completed | Folder structure, root `README.md`, Git repo initialization. |
-| **1** | Computer fundamentals and IPOS | Completed | IPOS activity trace, hardware/software classification, embedded systems. |
-| **2** | Terminal and file management | Completed | Command reference, `terminal-practice/` activities, flags & pipes. |
-| **3** | Operating system, processes and permissions | Completed | System specs, process monitoring, path types, POSIX permissions, OS roles. |
-| **4** | How programs run | Completed | Working `hello.py`, compiler vs interpreter comparative analysis. |
-| **5** | Number systems, Python and text encoding | Completed | Manual math working, Python verification, working `number_converter.py`, ASCII/UTF-8 notes. |
-| **6** | Git, GitHub, branches and Pull Requests | Completed | Git glossary, feature branch `update-about`, active Pull Request #2 (Open for instructor review). |
-| **7** | Computer networks | Completed | Networking concepts table, `ping` & `nslookup` tests, 6-step web request breakdown. |
-| **8** | Final review and submission | Completed | Repository audit, updated root `README.md`, verified checklist. |
+| **0** | Repository setup | Completed | Folder structure, root `README.md`, Git repo initialized. |
+| **1** | Computer basics and IPOS | Completed | IPOS table, hardware and software list, everyday systems. |
+| **2** | Terminal and file management | Completed | Command table, practice files in `terminal-practice/`, flags & pipes notes. |
+| **3** | Operating system and processes | Completed | System info, running process list, paths, permissions, and OS duties. |
+| **4** | How programs run | Completed | Working `hello.py` and compiler vs interpreter table. |
+| **5** | Numbers and data | Completed | Math steps for conversions, Python checks, `number_converter.py`, and ASCII notes. |
+| **6** | Git and GitHub | Completed | Git glossary, branch `update-about`, and Pull Request #2 (Open for instructor review). |
+| **7** | Computer networks | Completed | Network concepts table, `ping` & `nslookup` tests, 6-step website explanation. |
+| **8** | Final review and submission | Completed | Full repository check, final report README, and completed checklist. |
 
 ---
 
-### Mission 6 Pull Request Review Note
-As specified in Mission 6, Task 6.3, Step 5:  
+### Mission 6 Pull Request Status Note
+In Mission 6, Task 6.3, Step 5 states:  
 > *"Merge the PR only if your instructor has asked you to complete the merge. If the PR is not merged, clearly state its status in your README."*
 
 - **Pull Request Status:** **OPEN / Unmerged**
-- **Pull Request Reference:** Pull Request #2 (`https://github.com/priince0/digital-detective-8504/pull/2`)
-- **Branches:** Merging `update-about` into `main`
-- **Instructor Action:** Ready for evaluation. The PR is intentionally preserved in an open state so the instructor can inspect the diff and branch history on GitHub. It will be merged upon the instructor's instruction during lab review.
+- **Pull Request Link:** [Pull Request #2](https://github.com/priince0/digital-detective-8504/pull/2)
+- **Branch:** `update-about` into `main`
+- **Note:** In order to follow Step 5, I have kept the Pull Request open on GitHub so my instructor can see the open PR and inspect the diff during evaluation. I will complete the merge once my instructor reviews it in class.
 
 ---
 
@@ -63,19 +63,18 @@ As specified in Mission 6, Task 6.3, Step 5:
 - [x] All final changes are committed and pushed to GitHub.
 
 ## 5. Difficulties faced
-Understanding the conditional requirement in Step 5 regarding whether to merge the Pull Request immediately or leave it open awaiting instructor instruction.
+Double-checking that all headings matched across all nine README files and making sure all relative links work.
 
 ## 6. How I resolved them
-Left Pull Request #2 open on GitHub for the instructor to review during evaluation and explicitly documented its status and link in both Mission 6 and Mission 8 documentation.
+I checked each folder one by one and tested the markdown links in VS Code to make sure they point to the correct files.
 
 ## 7. Evidence / files
-- Complete repository structure across `mission-00-setup` through `mission-08-final-report`
-- Root navigation document: `README.md`
-- Mission 8 documentation: `mission-08-final-report/README.md`
-- Working scripts: `mission-04-programs/hello.py`, `mission-05-numbers-data/number_converter.py`
-- Practice outputs: `terminal-practice/notes.txt`, `terminal-practice/notes_backup_archive.txt`
+- Root documentation: `README.md`
+- Nine mission folders: `mission-00-setup` through `mission-08-final-report`
+- Python programs: `mission-04-programs/hello.py` and `mission-05-numbers-data/number_converter.py`
+- Terminal practice files: `terminal-practice/notes.txt` and `terminal-practice/notes_backup_archive.txt`
 
 ## 8. Commit details
-- **Commit message:** `Update Mission 6 and 8 with instructor PR status`
+- **Commit message:** `Humanize documentation and tone across repository`
 - **Branch:** `main`
-- **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`
+- **Push status:** Pushed to GitHub
