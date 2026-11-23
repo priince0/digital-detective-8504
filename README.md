@@ -70,6 +70,7 @@ Working through these missions helped me understand a lot about how computers wo
 - **Using the command line:** I got much more comfortable using Terminal commands to look at files and folders instead of relying only on mouse clicks.
 - **Data representation:** Doing the math by hand made it clear how numbers and letters are stored as 1s and 0s in binary.
 - **Git workflow:** I practiced making separate commits, creating a branch, and creating a Pull Request on GitHub.
+- **Network basics:** Learning how a request travels from my browser through my home router and DNS to reach a web server.
 
 ---
 
