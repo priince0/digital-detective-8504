@@ -1,38 +1,37 @@
 # Mission 0 — Repository and workspace setup
 
 ## 1. Task / objective
-The objective of this mission was to create and configure a clean project directory matching the assignment naming rules, verify that the prerequisite tools (Python 3 and Git) are installed and working, establish the required folder structure for all subsequent missions, prepare the root `README.md`, and publish the repository to GitHub.
+The goal of this first mission was to set up my workspace for the assignment. I needed to pick a proper repository name using the last four digits of my USN, verify that Python 3 and Git are installed on my laptop, set up the folder structure for all nine missions, make a root `README.md`, and push the initial project to GitHub.
 
 ## 2. Work completed
-- Decided on the repository name based on the naming convention: `digital-detective-8504` (using the last 4 digits of my USN).
-- Verified installed versions of Python 3 and Git using the terminal.
-- Created the folder structure for all 9 missions (Mission 0 through Mission 8) and an `evidence/` directory.
-- Created the root `README.md` containing the project overview, student details, mission index, and commit workflow rules.
-- Created this mission documentation file inside `mission-00-setup/README.md`.
-- Initialized local Git repository on the `main` branch, linked the remote GitHub repository at `https://github.com/priince0/digital-detective-8504.git`, and staged the initial workspace structure.
+- Chose my repository name following the assignment rules: `digital-detective-8504` (using my USN digits 8504).
+- Checked my installed versions of Python 3 and Git in Terminal.
+- Created all the folders for Mission 0 through Mission 8, along with an `evidence/` folder.
+- Wrote the main root `README.md` to introduce the project, list the missions, and provide links.
+- Set up Git locally on the `main` branch, linked it to my GitHub repository, and pushed the initial setup.
 
 ## 3. Commands / tools used
-- `python3 --version`: Verified the Python 3 installation (output: `Python 3.14.6`).
-- `git --version`: Verified the Git installation (output: `git version 2.54.0 (Apple Git-157)`).
-- `mkdir -p ...`: Created all required mission folders (`mission-00-setup` through `mission-08-final-report` and `evidence`).
-- `git init -b main`: Initialized the Git repository with `main` as the default branch.
-- `git remote add origin https://github.com/priince0/digital-detective-8504.git`: Linked the local repository to GitHub.
+- `python3 --version`: Checked that Python 3 was installed (got `Python 3.14.6`).
+- `git --version`: Checked that Git was installed (got `git version 2.54.0`).
+- `mkdir -p ...`: Created the mission folders from `mission-00-setup` to `mission-08-final-report`.
+- `git init -b main`: Initialized a new Git repository with `main` as the default branch.
+- `git remote add origin https://github.com/priince0/digital-detective-8504.git`: Connected my local folder to my GitHub repo.
 
 ## 4. My understanding
-A Git repository is a digital storage space tracked by the Git version control system. It records the complete history of files, modifications, and commits over time. Organizing the repository by dedicated mission folders keeps the codebase structured and modular. Each folder acts as an isolated chapter with its own documentation, code, and evidence, making it straightforward to review, test, and grade individual topics independently without cluttering the project root.
+A Git repository is essentially a folder tracked by Git so that you can record the history of your files as you work. I organized the assignment into separate mission folders because having a dedicated folder for each topic makes everything clean and easy to find. Each mission has its own README and files, so anyone reviewing the project can look at one specific topic without getting lost.
 
 ## 5. Difficulties faced
-The initial local directory created on the desktop had a slight typo (`digitial` instead of `digital`), which could cause an inconsistency with the remote repository name and assignment specification.
+My initial local folder on the desktop had a small typing mistake in the name (`digitial` with an extra i instead of `digital`), which did not match the GitHub repository name.
 
 ## 6. How I resolved them
-Created a symbolic link mapping `digital-detective-8504` directly to the workspace directory to ensure both path references resolve identically without breaking path resolution or command execution.
+I made a symbolic link so that both paths refer to the exact same directory, making sure the local folder and the online repository name match up without breaking anything.
 
 ## 7. Evidence / files
-- Root documentation: `README.md`
-- Mission 0 documentation: `mission-00-setup/README.md`
-- Directory placeholder: `evidence/.gitkeep`
+- Root README: `README.md`
+- Mission setup notes: `mission-00-setup/README.md`
+- Evidence folder: `evidence/.gitkeep`
 
 ## 8. Commit details
 - **Commit message:** `Set up Digital Detective mission structure`
 - **Branch:** `main`
-- **Push status:** Pushed to `https://github.com/priince0/digital-detective-8504.git`
+- **Push status:** Pushed to GitHub
